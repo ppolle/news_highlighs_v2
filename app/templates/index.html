@@ -2,7 +2,15 @@
 
 {% block content %}
 <div class="container">
-	<h1 class="text-center">Welcome to Flask Base App</h1>	
-</div>
+	<h3> News Sources</h3>
 
+	{% for status_sources in status %}
+	<a href="/article/{{status_sources.id}}">{{status_sources.name}}</a>
+	<ul>
+		<li>{{status_sources.description}}</li>
+	</ul>
+	{% endfor%}
+
+	</p>
+</div>
 {% endblock %}
