@@ -1,6 +1,13 @@
-from . import login_manager
-from flask_login import UserMixin
+class NewsSources:
+    '''
+    Sources class to define Sources Objects
+    '''
 
-
-class User(UserMixin,db.Model):
-    __tablename__ = 'users'
+    def __init__(self, id, name, description, url, category, country, language):
+        self.id = id
+        self.name = name
+        self.description = description
+        self.url = url
+        self.category = category
+        self.country = country
+        self.language = language
